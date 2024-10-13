@@ -1,0 +1,483 @@
+/* Global Styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}
+
+body {
+    /* background-color: #FAA916; */
+    background-color: #0d0da9; 
+     color: #333;
+    color:#FBFFFE ;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #302f2f;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: #e9e5e5;
+}
+
+a {
+    color: #e67e22;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    /* background-color: #FAA916; */
+    background-color: #060668;
+    padding: 0.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo img{
+    height: 45px;
+    border-radius: 50%;
+    box-shadow:0px 0px 20px #4d0cff;
+    margin-top:8px ;
+
+    
+}
+
+.logo h1 {
+    color: #fff;
+    display: inline;
+    margin-bottom: 20px;
+    
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    font-size: 25px;
+    text-decoration: underline;
+    color: #f4f3f7;
+    text-shadow:0 0 8px #fff;
+
+}
+/* Hero Section */
+
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url('fitness-hero.webp') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+@keyframes move{
+    0%{
+transform:translateX(0%);
+    }
+    100%{
+transform: translateX(100%);
+    }
+}
+.hero-content h2{
+    color: #c6b8f0;
+    text-align: left;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(47, 45, 45, 0.5);
+}
+
+.hero-content {
+    z-index: 1;
+    color: #e7e6e6;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    background-color: #060668;
+    padding: 1rem 2rem;
+    color: #f4f4f4;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.cta-btn:hover{
+    box-shadow: 0px 0px 10px navajowhite;
+    z-index: +10; 
+    font-size: 1.025rem; 
+    background-color: transparent;
+    
+}
+
+
+/* Section Styles */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #28289b;
+    margin-bottom: 1rem;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    
+}
+#workouts p{
+    color: #fff;
+}
+
+.workouts-list, .trainer-profile {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.workout-item, .trainer {
+    background-color: #69697c;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem;
+    width: 40%;
+    text-align: left;
+    box-shadow: 0 0 8px #e3e3e9;
+}
+
+.workout-item img{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow-x:hidden;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+.workout-item h3{
+    font-size: 22px;
+}
+/* .trainer{
+    width:450px;
+    
+
+} */
+.trainer h3{
+    font-size: 22px;
+    margin-top: 20px;
+}
+/*@keyframes slide {
+    0% { transform: translateX(0); }
+     25% { transform: translateX(-100%); }
+    50% { transform: translateX(-150%); }
+    75% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+    height: 300px;
+}
+
+.slider {
+    display: flex;
+    width: calc(100% * 5); /*Adjust based on the number of slides 
+    animation-name: slide ;
+    animation-duration:50s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite ;
+}
+
+.slide {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}*/
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 300px; 
+}
+.slider {
+    display: flex;
+    width: 400%; 
+    animation: 10s linear  infinite running slidein;  
+}
+
+
+.slide {
+    width: 100%;  
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+
+@keyframes slidein {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+    .slider-container:hover .slider {
+    animation-play-state: paused; 
+}
+
+
+.trainer img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #fff;
+    
+}
+.trainer:hover{
+    box-shadow: 0 0px 28px;
+}
+.trainer img:hover{
+    box-shadow: 0px 18px 25px;
+    width: 110%;
+    
+    
+    
+}
+
+/*NUtrition section*/
+.nutritions p {
+    width: 100%;
+    background-color: #69697c;
+    border-radius: 10px;
+    padding: 10px;
+    
+    
+}
+.nutritions p:hover{
+    box-shadow: 0 0 25px;
+    
+}
+
+.btn-primary{
+    border: 2px solid black;
+    padding: 8px 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    
+}
+.meal h3{
+    font-size: 28px;
+}
+.meal p{
+    width: 100%;
+    background-color: #69697c;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-top: 10px;
+    height: 200px;
+}
+.meal p:hover{
+    box-shadow: 0 0 30px;
+}
+.recipes h3{
+    font-size: 28px;
+}
+.recipes p{
+    width: 100%;
+    background-color: #69697c;
+    border-radius: 10px;
+    padding: 50px 20px;
+    margin-top: 10px;
+    height: 200px;
+}
+.recipes p:hover{
+    box-shadow: 0 0 30px;
+}
+
+/* Testimonials */
+.testimonial {
+    background-color: #8b8989;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+    width: 60%;
+    text-align: center;
+}
+.testimonial p{
+    font-size: 25px;
+    color: #000;
+}
+.testimonial:hover{
+    box-shadow: 0 0 30px #fff;
+    font-size: 22px;
+}
+/*Contact section*/
+
+.contact-information{
+    background-color: #28289b;
+    margin-bottom: 20px;
+}
+.contact input{
+    margin: 5px 100px 20px 320px;
+    border: #070153;
+    padding: 5px 50px;
+    border-radius: 20px;
+    font-size: 2rem;
+    background-color: #060668;
+    box-shadow: 0px 15px 20px #070153;
+    
+}
+.contact #message{
+    border: #070153;
+    box-shadow: 0px 15px 20px #070153;
+}
+.contact #message:hover{
+    background-color:#c6b8f0;
+
+}
+.contact input:hover{
+    background-color:#c6b8f0;
+}
+
+#message{
+    margin: 5px 100px 20px 320px;
+    border: 2px solid #2c09f1;
+    padding: 5px 50px;
+    border-radius: 20px;
+    font-size: 2rem;
+    background-color: #060668;
+}
+.button .BTN{
+    padding: 10px 25px;
+    background-color: #1515f2;
+    color: #e3e3e9;
+    font-size: 25px;
+    border: 2px solid #060668;
+    border-radius: 10px;
+   display: inline-flex;
+ 
+}
+
+
+.button{
+    width: 600px;
+    border: 2px solid transparent ;
+    margin-left:320px ;
+}
+.BTN1{
+    padding: 10px 25px;
+    background-color: #1515f2;
+    color: #e3e3e9;
+    font-size: 25px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    
+}
+.BTN2{
+    padding: 10px 25px;
+    background-color: #1515f2;
+    color: #e3e3e9;
+    font-size: 25px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin-left: 330px;
+}
+.BTN1:hover{
+    box-shadow: 0 0 20px #d2d3d6;
+    background-color: #504f4f;
+    font-size: 28px;
+    
+}
+.BTN2:hover{
+    box-shadow: 0 0 20px #d2d3d6;
+    background-color: #504f4f;
+    font-size: 28px;
+}
+#button-info{
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 10px #fff;
+}
+.contact-information h1{
+    margin-left: 450px;
+    font-size: 40px;
+    color: #03000a;
+    
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: #b5b6d7;
+    margin: 0 10px;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: #0d0da9;
+}
+.social-media a i{
+    font-size: 25px;
+    
+    
+}
+
+
